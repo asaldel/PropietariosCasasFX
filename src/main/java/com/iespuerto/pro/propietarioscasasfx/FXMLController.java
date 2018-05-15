@@ -68,6 +68,26 @@ public class FXMLController implements Initializable {
     private Button btnEliminarPropietarioEnCasa;
     @FXML
     private Button btnAsociarPropietarioEnCasa;
+    @FXML
+    private Label lblIdCasaEnPropietario;
+    @FXML
+    private TextField txtIdCasaEnPropietario;
+    @FXML
+    private Label lblDireccionCasaEnPropietario;
+    @FXML
+    private TextField txtDireccionCasaEnPropietario;
+    @FXML
+    private Label lblIdPropietarioEnCasa;
+    @FXML
+    private TextField txtIdPropietarioEnCasa;
+    @FXML
+    private Label lblNombrePropietarioEnCasa;
+    @FXML
+    private TextField txtNombrePropietarioEnCasa;
+    @FXML
+    private Label lblApellidosPropietarioEnCasa;
+    @FXML
+    private TextField txtApellidosPropietarioEnCasa;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
