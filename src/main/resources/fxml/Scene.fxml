@@ -75,10 +75,10 @@
                                         <Button fx:id="btnAnteriorCasaEnPropietario" layoutX="383.0" layoutY="88.0" mnemonicParsing="false" onAction="#btnAnteriorCasaEnPropietarioOnClick" prefHeight="25.0" prefWidth="25.0" text="&lt;" />
                                         <Button fx:id="btnEliminarCasaEnPropietario" layoutX="433.0" layoutY="88.0" mnemonicParsing="false" onAction="#btnEliminarCasaEnPropietarioOnClick" prefHeight="25.0" prefWidth="25.0" text="-" />
                                         <Button fx:id="btnAsociarCasaEnPropietario" layoutX="359.0" layoutY="88.0" mnemonicParsing="false" onAction="#btnAsociarCasaEnPropietarioOnClick" text="+" />
-                              <Label fx:id="lblIdCasaEnPropietario" layoutX="30.0" layoutY="59.0" text="ID" />
-                              <TextField fx:id="txtIdCasaEnPropietario" layoutX="30.0" layoutY="88.0" prefHeight="25.0" prefWidth="28.0" />
-                              <Label fx:id="lblDireccionCasaEnPropietario" layoutX="104.0" layoutY="59.0" text="Dirección" />
-                              <TextField fx:id="txtDireccionCasaEnPropietario" layoutX="104.0" layoutY="88.0" prefHeight="25.0" prefWidth="171.0" />
+                                        <Label fx:id="lblIdCasaEnPropietario" layoutX="30.0" layoutY="59.0" text="ID" />
+                                        <TextField fx:id="txtIdCasaEnPropietario" layoutX="30.0" layoutY="88.0" prefHeight="25.0" prefWidth="28.0" />
+                                        <Label fx:id="lblDireccionCasaEnPropietario" layoutX="104.0" layoutY="59.0" text="Dirección" />
+                                        <TextField fx:id="txtDireccionCasaEnPropietario" layoutX="104.0" layoutY="88.0" prefHeight="25.0" prefWidth="171.0" />
                                     </children>
                                 </Pane>
                             </children>
@@ -103,12 +103,12 @@
                                         <Button fx:id="btnAnteriorPropietarioEnCasa" layoutX="383.0" layoutY="88.0" mnemonicParsing="false" onAction="#btnAnteriorPropietarioEnCasaOnClick" prefHeight="25.0" prefWidth="25.0" text="&lt;" />
                                         <Button fx:id="btnEliminarPropietarioEnCasa" layoutX="433.0" layoutY="88.0" mnemonicParsing="false" onAction="#btnEliminarPropietarioEnCasaOnClick" prefHeight="25.0" prefWidth="25.0" text="-" />
                                         <Button fx:id="btnAsociarPropietarioEnCasa" layoutX="359.0" layoutY="88.0" mnemonicParsing="false" onAction="#btnAsociarPropietarioEnCasaOnClick" text="+" />
-                              <Label fx:id="lblIdPropietarioEnCasa" layoutX="17.0" layoutY="60.0" text="ID" />
-                              <TextField fx:id="txtIdPropietarioEnCasa" layoutX="17.0" layoutY="88.0" prefHeight="25.0" prefWidth="28.0" />
-                              <Label fx:id="lblNombrePropietarioEnCasa" layoutX="74.0" layoutY="60.0" text="Nombre" />
-                              <TextField fx:id="txtNombrePropietarioEnCasa" layoutX="74.0" layoutY="88.0" prefHeight="25.0" prefWidth="110.0" />
-                              <Label fx:id="lblApellidosPropietarioEnCasa" layoutX="223.0" layoutY="61.0" text="Apellidos" />
-                              <TextField fx:id="txtApellidosPropietarioEnCasa" layoutX="223.0" layoutY="88.0" prefHeight="25.0" prefWidth="110.0" />
+                                        <Label fx:id="lblIdPropietarioEnCasa" layoutX="17.0" layoutY="60.0" text="ID" />
+                                        <TextField fx:id="txtIdPropietarioEnCasa" layoutX="17.0" layoutY="88.0" prefHeight="25.0" prefWidth="28.0" />
+                                        <Label fx:id="lblNombrePropietarioEnCasa" layoutX="74.0" layoutY="60.0" text="Nombre" />
+                                        <TextField fx:id="txtNombrePropietarioEnCasa" layoutX="74.0" layoutY="88.0" prefHeight="25.0" prefWidth="110.0" />
+                                        <Label fx:id="lblApellidosPropietarioEnCasa" layoutX="223.0" layoutY="61.0" text="Apellidos" />
+                                        <TextField fx:id="txtApellidosPropietarioEnCasa" layoutX="223.0" layoutY="88.0" prefHeight="25.0" prefWidth="110.0" />
                                     </children>
                                 </Pane>
                             </children>

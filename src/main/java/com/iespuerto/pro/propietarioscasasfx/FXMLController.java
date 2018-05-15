@@ -91,19 +91,12 @@ public class FXMLController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        txtIdPropietario.setDisable(true);
-        txtNombrePropietario.setDisable(true);
-        txtApellidosPropietario.setDisable(true);
         
-        txtIdCasa.setDisable(true);
-        txtDireccionCasa.setDisable(true);
     }
 
     @FXML
     private void btnAgregarPropietarioOnClick(ActionEvent event) {
-        txtIdPropietario.setDisable(false);
-        txtNombrePropietario.setDisable(false);
-        txtApellidosPropietario.setDisable(false);
+        
     }
     
     @FXML
@@ -143,8 +136,7 @@ public class FXMLController implements Initializable {
     
     @FXML
     private void btnAgregarCasaOnClick(ActionEvent event) {
-        txtIdCasa.setDisable(false);
-        txtDireccionCasa.setDisable(false);
+        
     }
     
     @FXML
