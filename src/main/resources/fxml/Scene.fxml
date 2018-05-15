@@ -10,95 +10,102 @@
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 
-<AnchorPane id="AnchorPane" prefHeight="407.0" prefWidth="586.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/9.0.1" fx:controller="com.iespuerto.pro.propietarioscasasfx.FXMLController">
-   <children>
-      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="586.0">
-         <menus>
-            <Menu mnemonicParsing="false" text="File">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="New" />
-                  <MenuItem mnemonicParsing="false" text="Open…" />
-                  <Menu mnemonicParsing="false" text="Open Recent" />
-                  <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" text="Close" />
-                  <MenuItem mnemonicParsing="false" text="Save" />
-                  <MenuItem mnemonicParsing="false" text="Save As…" />
-                  <MenuItem mnemonicParsing="false" text="Revert" />
-                  <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" text="Preferences…" />
-                  <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" text="Quit" />
-               </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Edit">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="Undo" />
-                  <MenuItem mnemonicParsing="false" text="Redo" />
-                  <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" text="Cut" />
-                  <MenuItem mnemonicParsing="false" text="Copy" />
-                  <MenuItem mnemonicParsing="false" text="Paste" />
-                  <MenuItem mnemonicParsing="false" text="Delete" />
-                  <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" text="Select All" />
-                  <MenuItem mnemonicParsing="false" text="Unselect All" />
-               </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Help">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
-               </items>
-            </Menu>
-         </menus>
-      </MenuBar>
-      <TabPane layoutY="27.0" prefHeight="382.0" prefWidth="586.0" tabClosingPolicy="UNAVAILABLE">
-        <tabs>
-          <Tab text="Propietarios">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="353.0" prefWidth="574.0">
-                     <children>
-                        <Button fx:id="btnAgregarPropietario" layoutX="405.0" layoutY="73.0" mnemonicParsing="false" text="+" />
-                        <Button fx:id="btnEliminarPropietario" layoutX="480.0" layoutY="73.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" text="-" />
-                        <Button fx:id="btnSiguientePropietario" layoutX="455.0" layoutY="73.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" text="&gt;" />
-                        <Button fx:id="btnAnteriorPropietario" layoutX="430.0" layoutY="73.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" text="&lt;" />
-                        <Label fx:id="lblNombrePropietario" layoutX="101.0" layoutY="44.0" text="Nombre" />
-                        <TextField fx:id="txtNombrePropietario" layoutX="101.0" layoutY="73.0" prefHeight="25.0" prefWidth="110.0" />
-                        <Label fx:id="lblApellidosPropietario" layoutX="238.0" layoutY="44.0" text="Apellidos" />
-                        <TextField fx:id="txtApellidosPropietario" layoutX="238.0" layoutY="73.0" prefHeight="25.0" prefWidth="110.0" />
-                        <Label fx:id="lblIdPropietario" layoutX="41.0" layoutY="44.0" text="ID" />
-                        <TextField fx:id="txtIdPropietario" layoutX="41.0" layoutY="73.0" prefHeight="25.0" prefWidth="28.0" />
-                     </children>
-                  </AnchorPane>
-            </content>
-          </Tab>
-          <Tab text="Casas">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="353.0" prefWidth="574.0">
-                     <children>
-                        <Button layoutX="337.0" layoutY="73.0" mnemonicParsing="false" text="+" />
-                        <Button layoutX="412.0" layoutY="73.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" text="-" />
-                        <Button layoutX="387.0" layoutY="73.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" text="&gt;" />
-                        <Button layoutX="362.0" layoutY="73.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" text="&lt;" />
-                     </children>
-                  </AnchorPane>
-               </content>
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="353.0" prefWidth="574.0">
-                     <children>
-                        <Button fx:id="btnAgregarCasa" layoutX="405.0" layoutY="73.0" mnemonicParsing="false" text="+" />
-                        <Button fx:id="btnEliminarCasa" layoutX="480.0" layoutY="73.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" text="-" />
-                        <Button fx:id="btnSiguienteCasa" layoutX="455.0" layoutY="73.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" text="&gt;" />
-                        <Button fx:id="btnAnteriorCasa" layoutX="430.0" layoutY="73.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" text="&lt;" />
-                        <Label fx:id="lblDireccionCasa" layoutX="101.0" layoutY="44.0" text="Dirección" />
-                        <TextField fx:id="txtDireccionCasa" layoutX="101.0" layoutY="73.0" prefHeight="25.0" prefWidth="171.0" />
-                        <Label fx:id="lblIdCasa" layoutX="41.0" layoutY="44.0" text="ID" />
-                        <TextField fx:id="txtIdCasa" layoutX="41.0" layoutY="73.0" prefHeight="25.0" prefWidth="28.0" />
-                     </children>
-                  </AnchorPane>
-               </content>
-          </Tab>
-        </tabs>
-      </TabPane>
-   </children>
+<AnchorPane id="AnchorPane" prefHeight="407.0" prefWidth="586.0" stylesheets="@../styles/Styles.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.iespuerto.pro.propietarioscasasfx.FXMLController">
+    <children>
+        <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="586.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="New" />
+                        <MenuItem mnemonicParsing="false" text="Open…" />
+                        <Menu mnemonicParsing="false" text="Open Recent" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                        <MenuItem mnemonicParsing="false" text="Save" />
+                        <MenuItem mnemonicParsing="false" text="Save As…" />
+                        <MenuItem mnemonicParsing="false" text="Revert" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Preferences…" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Quit" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Undo" />
+                        <MenuItem mnemonicParsing="false" text="Redo" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Cut" />
+                        <MenuItem mnemonicParsing="false" text="Copy" />
+                        <MenuItem mnemonicParsing="false" text="Paste" />
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Select All" />
+                        <MenuItem mnemonicParsing="false" text="Unselect All" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <TabPane layoutY="27.0" prefHeight="382.0" prefWidth="586.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Propietarios">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="353.0" prefWidth="574.0">
+                            <children>
+                                <Button fx:id="btnAgregarPropietario" layoutX="405.0" layoutY="73.0" mnemonicParsing="false" onAction="#btnAgregarPropietarioOnClick" text="+" />
+                                <Button fx:id="btnEliminarPropietario" layoutX="480.0" layoutY="73.0" mnemonicParsing="false" onAction="#btnEliminarPropietarioOnClick" prefHeight="25.0" prefWidth="25.0" text="-" />
+                                <Button fx:id="btnSiguientePropietario" layoutX="455.0" layoutY="73.0" mnemonicParsing="false" onAction="#btnSiguientePropietarioOnClick" prefHeight="25.0" prefWidth="25.0" text="&gt;" />
+                                <Button fx:id="btnAnteriorPropietario" layoutX="430.0" layoutY="73.0" mnemonicParsing="false" onAction="#btnAnteriorPropietarioOnClick" prefHeight="25.0" prefWidth="25.0" text="&lt;" />
+                                <Label fx:id="lblNombrePropietario" layoutX="101.0" layoutY="44.0" text="Nombre" />
+                                <TextField fx:id="txtNombrePropietario" layoutX="101.0" layoutY="73.0" prefHeight="25.0" prefWidth="110.0" />
+                                <Label fx:id="lblApellidosPropietario" layoutX="238.0" layoutY="44.0" text="Apellidos" />
+                                <TextField fx:id="txtApellidosPropietario" layoutX="238.0" layoutY="73.0" prefHeight="25.0" prefWidth="110.0" />
+                                <Label fx:id="lblIdPropietario" layoutX="45.0" layoutY="44.0" text="ID" />
+                                <TextField fx:id="txtIdPropietario" layoutX="45.0" layoutY="73.0" prefHeight="25.0" prefWidth="28.0" />
+                                <Pane fx:id="paneCasasEnPropietario" layoutX="45.0" layoutY="118.0" prefHeight="200.0" prefWidth="497.0" style="-fx-border-width: 1; -fx-border-color: #039ed3; -fx-background-color: white;">
+                                    <children>
+                                        <Button fx:id="btnSiguienteCasaEnPropietario" layoutX="408.0" layoutY="88.0" mnemonicParsing="false" onAction="#btnSiguienteCasaEnPropietarioOnClick" prefHeight="25.0" prefWidth="25.0" text="&gt;" />
+                                        <Button fx:id="btnAnteriorCasaEnPropietario" layoutX="383.0" layoutY="88.0" mnemonicParsing="false" onAction="#btnAnteriorCasaEnPropietarioOnClick" prefHeight="25.0" prefWidth="25.0" text="&lt;" />
+                                        <Button fx:id="btnEliminarCasaEnPropietario" layoutX="433.0" layoutY="88.0" mnemonicParsing="false" onAction="#btnEliminarCasaEnPropietarioOnClick" prefHeight="25.0" prefWidth="25.0" text="-" />
+                                        <Button fx:id="btnAsociarCasaEnPropietario" layoutX="359.0" layoutY="88.0" mnemonicParsing="false" onAction="#btnAsociarCasaEnPropietarioOnClick" text="+" />
+                                    </children>
+                                </Pane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Casas">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="353.0" prefWidth="574.0">
+                            <children>
+                                <Button fx:id="btnAgregarCasa" layoutX="405.0" layoutY="73.0" mnemonicParsing="false" onAction="#btnAgregarCasaOnClick" text="+" />
+                                <Button fx:id="btnSiguienteCasa" layoutX="455.0" layoutY="73.0" mnemonicParsing="false" onAction="#btnSiguienteCasaOnClick" prefHeight="25.0" prefWidth="25.0" text="&gt;" />
+                                <Button fx:id="btnAnteriorCasa" layoutX="430.0" layoutY="73.0" mnemonicParsing="false" onAction="#btnAnteriorCasaOnClick" prefHeight="25.0" prefWidth="25.0" text="&lt;" />
+                                <Button fx:id="btnEliminarCasa" layoutX="480.0" layoutY="73.0" mnemonicParsing="false" onAction="#btnEliminarCasaOnClick" prefHeight="25.0" prefWidth="25.0" text="-" />
+                                <Label fx:id="lblDireccionCasa" layoutX="101.0" layoutY="44.0" text="Dirección" />
+                                <TextField fx:id="txtDireccionCasa" layoutX="101.0" layoutY="73.0" prefHeight="25.0" prefWidth="171.0" />
+                                <Label fx:id="lblIdCasa" layoutX="45.0" layoutY="44.0" text="ID" />
+                                <TextField fx:id="txtIdCasa" layoutX="45.0" layoutY="73.0" prefHeight="25.0" prefWidth="28.0" />
+                                <Pane fx:id="panePropietariosEnCasa" layoutX="45.0" layoutY="118.0" prefHeight="200.0" prefWidth="497.0" style="-fx-border-width: 1; -fx-border-color: #039ed3; -fx-background-color: white;">
+                                    <children>
+                                        <Button fx:id="btnSiguientePropietarioEnCasa" layoutX="408.0" layoutY="88.0" mnemonicParsing="false" onAction="#btnSiguientePropietarioEnCasaOnClick" prefHeight="25.0" prefWidth="25.0" text="&gt;" />
+                                        <Button fx:id="btnAnteriorPropietarioEnCasa" layoutX="383.0" layoutY="88.0" mnemonicParsing="false" onAction="#btnAnteriorPropietarioEnCasaOnClick" prefHeight="25.0" prefWidth="25.0" text="&lt;" />
+                                        <Button fx:id="btnEliminarPropietarioEnCasa" layoutX="433.0" layoutY="88.0" mnemonicParsing="false" onAction="#btnEliminarPropietarioEnCasaOnClick" prefHeight="25.0" prefWidth="25.0" text="-" />
+                                        <Button fx:id="btnAsociarPropietarioEnCasa" layoutX="359.0" layoutY="88.0" mnemonicParsing="false" onAction="#btnAsociarPropietarioEnCasaOnClick" text="+" />
+                                    </children>
+                                </Pane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
 </AnchorPane>
