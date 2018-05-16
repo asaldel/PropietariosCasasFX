@@ -88,6 +88,18 @@ public class FXMLController implements Initializable {
     private Label lblApellidosPropietarioEnCasa;
     @FXML
     private TextField txtApellidosPropietarioEnCasa;
+    @FXML
+    private Button btnCancelarCasaEnPropietario;
+    @FXML
+    private Button btnAceptarCasaEnPropietario;
+    @FXML
+    private Button btnModificarPropietario;
+    @FXML
+    private Button btnCancelarPropietarioEnCasa;
+    @FXML
+    private Button btnAceptarPropietarioEnCasa;
+    @FXML
+    private Button btnModificarCasa;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -115,6 +127,11 @@ public class FXMLController implements Initializable {
     }
     
     @FXML
+    private void btnModificarPropietarioOnClick(ActionEvent event) {
+    
+    }
+    
+    @FXML
     private void btnAsociarCasaEnPropietarioOnClick(ActionEvent event) {
     
     }
@@ -131,6 +148,16 @@ public class FXMLController implements Initializable {
     
     @FXML
     private void btnEliminarCasaEnPropietarioOnClick(ActionEvent event) {
+    
+    }
+    
+    @FXML
+    private void btnCancelarCasaEnPropietarioOnClick(ActionEvent event) {
+    
+    }
+
+    @FXML
+    private void btnAceptarCasaEnPropietarioOnClick(ActionEvent event) {
     
     }
     
@@ -155,6 +182,11 @@ public class FXMLController implements Initializable {
     }
     
     @FXML
+    private void btnModificarCasaOnClick(ActionEvent event) {
+    
+    }
+    
+    @FXML
     private void btnAsociarPropietarioEnCasaOnClick(ActionEvent event) {
     
     }
@@ -173,4 +205,14 @@ public class FXMLController implements Initializable {
     private void btnEliminarPropietarioEnCasaOnClick(ActionEvent event) {
     
     }    
+
+    @FXML
+    private void btnCancelarPropietarioEnCasaOnClick(ActionEvent event) {
+    
+    }
+
+    @FXML
+    private void btnAceptarPropietarioEnCasaOnClick(ActionEvent event) {
+    
+    }
 }
