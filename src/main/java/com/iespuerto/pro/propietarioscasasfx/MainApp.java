@@ -20,6 +20,8 @@ public class MainApp extends Application {
         stage.setTitle("JavaFX and Maven");
         stage.setScene(scene);
         stage.show();
+        stage.setTitle("Propietarios y Casas");
+        stage.setResizable(false);
     }
 
     /**
