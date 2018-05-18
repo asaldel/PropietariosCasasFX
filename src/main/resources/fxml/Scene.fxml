@@ -59,31 +59,35 @@
                     <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="353.0" prefWidth="574.0">
                             <children>
-                                <Button fx:id="btnAgregarPropietario" layoutX="405.0" layoutY="73.0" mnemonicParsing="false" onAction="#btnAgregarPropietarioOnClick" text="+" />
-                                <Button fx:id="btnEliminarPropietario" layoutX="480.0" layoutY="73.0" mnemonicParsing="false" onAction="#btnEliminarPropietarioOnClick" prefHeight="25.0" prefWidth="25.0" text="-" />
-                                <Button fx:id="btnSiguientePropietario" layoutX="455.0" layoutY="73.0" mnemonicParsing="false" onAction="#btnSiguientePropietarioOnClick" prefHeight="25.0" prefWidth="25.0" text="&gt;" />
-                                <Button fx:id="btnAnteriorPropietario" layoutX="430.0" layoutY="73.0" mnemonicParsing="false" onAction="#btnAnteriorPropietarioOnClick" prefHeight="25.0" prefWidth="25.0" text="&lt;" />
-                                <Label fx:id="lblNombrePropietario" layoutX="101.0" layoutY="44.0" text="Nombre" />
-                                <TextField fx:id="txtNombrePropietario" layoutX="101.0" layoutY="73.0" prefHeight="25.0" prefWidth="110.0" />
-                                <Label fx:id="lblApellidosPropietario" layoutX="238.0" layoutY="44.0" text="Apellidos" />
-                                <TextField fx:id="txtApellidosPropietario" layoutX="238.0" layoutY="73.0" prefHeight="25.0" prefWidth="110.0" />
-                                <Label fx:id="lblIdPropietario" layoutX="45.0" layoutY="44.0" text="ID" />
-                                <TextField fx:id="txtIdPropietario" layoutX="45.0" layoutY="73.0" prefHeight="25.0" prefWidth="28.0" />
+                                <Button fx:id="btnAgregarPropietario" layoutX="156.0" layoutY="111.0" mnemonicParsing="false" onAction="#btnAgregarPropietarioOnClick" text="+" />
+                                <Button fx:id="btnEliminarPropietario" layoutX="231.0" layoutY="111.0" mnemonicParsing="false" onAction="#btnEliminarPropietarioOnClick" prefHeight="25.0" prefWidth="25.0" text="-" />
+                                <Button fx:id="btnSiguientePropietario" layoutX="206.0" layoutY="111.0" mnemonicParsing="false" onAction="#btnSiguientePropietarioOnClick" prefHeight="25.0" prefWidth="25.0" text="&gt;" />
+                                <Button fx:id="btnAnteriorPropietario" layoutX="181.0" layoutY="111.0" mnemonicParsing="false" onAction="#btnAnteriorPropietarioOnClick" prefHeight="25.0" prefWidth="25.0" text="&lt;" />
+                                <Label fx:id="lblNombrePropietario" layoutX="176.0" layoutY="36.0" text="Nombre" />
+                                <TextField fx:id="txtNombrePropietario" layoutX="176.0" layoutY="66.0" prefHeight="25.0" prefWidth="110.0" />
+                                <Label fx:id="lblApellidosPropietario" layoutX="311.0" layoutY="36.0" text="Apellidos" />
+                                <TextField fx:id="txtApellidosPropietario" layoutX="311.0" layoutY="66.0" prefHeight="25.0" prefWidth="110.0" />
+                                <Label fx:id="lblDniPropietario" layoutX="45.0" layoutY="36.0" prefHeight="17.0" prefWidth="24.0" text="DNI" />
+                                <TextField fx:id="txtDniPropietario" layoutX="45.0" layoutY="66.0" prefHeight="25.0" prefWidth="100.0" />
                                 <Pane fx:id="paneCasasEnPropietario" layoutX="45.0" layoutY="153.0" prefHeight="165.0" prefWidth="497.0" style="-fx-border-width: 1; -fx-border-color: #039ed3; -fx-background-color: white;">
                                     <children>
                                         <Button fx:id="btnSiguienteCasaEnPropietario" layoutX="406.0" layoutY="55.0" mnemonicParsing="false" onAction="#btnSiguienteCasaEnPropietarioOnClick" prefHeight="25.0" prefWidth="25.0" text="&gt;" />
                                         <Button fx:id="btnAnteriorCasaEnPropietario" layoutX="381.0" layoutY="55.0" mnemonicParsing="false" onAction="#btnAnteriorCasaEnPropietarioOnClick" prefHeight="25.0" prefWidth="25.0" text="&lt;" />
                                         <Button fx:id="btnEliminarCasaEnPropietario" layoutX="431.0" layoutY="55.0" mnemonicParsing="false" onAction="#btnEliminarCasaEnPropietarioOnClick" prefHeight="25.0" prefWidth="25.0" text="-" />
                                         <Button fx:id="btnAsociarCasaEnPropietario" layoutX="357.0" layoutY="55.0" mnemonicParsing="false" onAction="#btnAsociarCasaEnPropietarioOnClick" text="+" />
-                                        <Label fx:id="lblIdCasaEnPropietario" layoutX="30.0" layoutY="27.0" text="ID" />
-                                        <TextField fx:id="txtIdCasaEnPropietario" layoutX="28.0" layoutY="55.0" prefHeight="25.0" prefWidth="28.0" />
-                                        <Label fx:id="lblDireccionCasaEnPropietario" layoutX="104.0" layoutY="27.0" text="Dirección" />
-                                        <TextField fx:id="txtDireccionCasaEnPropietario" layoutX="104.0" layoutY="55.0" prefHeight="25.0" prefWidth="171.0" />
+                                        <Label fx:id="lblReferenciaCatastralCasaEnPropietario" layoutX="30.0" layoutY="27.0" text="Referencia catastral" />
+                                        <TextField fx:id="txtReferenciaCatastralCasaEnPropietario" layoutX="28.0" layoutY="55.0" prefHeight="25.0" prefWidth="106.0" />
+                                        <Label fx:id="lblMetrosCasaEnPropietario" layoutX="163.0" layoutY="27.0" text="Metros" />
+                                        <TextField fx:id="txtMetrosCasaEnPropietario" layoutX="163.0" layoutY="55.0" prefHeight="25.0" prefWidth="61.0" />
                                         <Button fx:id="btnCancelarCasaEnPropietario" layoutX="29.0" layoutY="104.0" mnemonicParsing="false" onAction="#btnCancelarCasaEnPropietarioOnClick" text="Cancelar" />
                                         <Button fx:id="btnAceptarCasaEnPropietario" layoutX="104.0" layoutY="104.0" mnemonicParsing="false" onAction="#btnAceptarCasaEnPropietarioOnClick" text="Aceptar" />
+                                        <Label fx:id="lblPrecioCasaEnPropietario" layoutX="257.0" layoutY="27.0" text="Precio" />
+                                        <TextField fx:id="txtPrecioCasaEnPropietario" layoutX="257.0" layoutY="55.0" prefHeight="25.0" prefWidth="51.0" />
                                     </children>
                                 </Pane>
                                 <Button fx:id="btnModificarPropietario" layoutX="45.0" layoutY="111.0" mnemonicParsing="false" onAction="#btnModificarPropietarioOnClick" text="Modificar" />
+                                <Label fx:id="lblTelefonoPropietario" layoutX="451.0" layoutY="36.0" text="Teléfono" />
+                                <TextField fx:id="txtTelefonoPropietario" layoutX="451.0" layoutY="66.0" prefHeight="25.0" prefWidth="107.0" />
                             </children>
                         </AnchorPane>
                     </content>
@@ -92,31 +96,35 @@
                     <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="353.0" prefWidth="574.0">
                             <children>
-                                <Button fx:id="btnAgregarCasa" layoutX="405.0" layoutY="73.0" mnemonicParsing="false" onAction="#btnAgregarCasaOnClick" text="+" />
-                                <Button fx:id="btnSiguienteCasa" layoutX="455.0" layoutY="73.0" mnemonicParsing="false" onAction="#btnSiguienteCasaOnClick" prefHeight="25.0" prefWidth="25.0" text="&gt;" />
-                                <Button fx:id="btnAnteriorCasa" layoutX="430.0" layoutY="73.0" mnemonicParsing="false" onAction="#btnAnteriorCasaOnClick" prefHeight="25.0" prefWidth="25.0" text="&lt;" />
-                                <Button fx:id="btnEliminarCasa" layoutX="480.0" layoutY="73.0" mnemonicParsing="false" onAction="#btnEliminarCasaOnClick" prefHeight="25.0" prefWidth="25.0" text="-" />
-                                <Label fx:id="lblDireccionCasa" layoutX="101.0" layoutY="44.0" text="Dirección" />
-                                <TextField fx:id="txtDireccionCasa" layoutX="101.0" layoutY="73.0" prefHeight="25.0" prefWidth="171.0" />
-                                <Label fx:id="lblIdCasa" layoutX="45.0" layoutY="44.0" text="ID" />
-                                <TextField fx:id="txtIdCasa" layoutX="45.0" layoutY="73.0" prefHeight="25.0" prefWidth="28.0" />
+                                <Button fx:id="btnAgregarCasa" layoutX="442.0" layoutY="73.0" mnemonicParsing="false" onAction="#btnAgregarCasaOnClick" text="+" />
+                                <Button fx:id="btnSiguienteCasa" layoutX="492.0" layoutY="73.0" mnemonicParsing="false" onAction="#btnSiguienteCasaOnClick" prefHeight="25.0" prefWidth="25.0" text="&gt;" />
+                                <Button fx:id="btnAnteriorCasa" layoutX="467.0" layoutY="73.0" mnemonicParsing="false" onAction="#btnAnteriorCasaOnClick" prefHeight="25.0" prefWidth="25.0" text="&lt;" />
+                                <Button fx:id="btnEliminarCasa" layoutX="517.0" layoutY="73.0" mnemonicParsing="false" onAction="#btnEliminarCasaOnClick" prefHeight="25.0" prefWidth="25.0" text="-" />
+                                <Label fx:id="lblMetrosCasa" layoutX="208.0" layoutY="44.0" text="Metros" />
+                                <TextField fx:id="txtMetrosCasa" layoutX="208.0" layoutY="73.0" prefHeight="25.0" prefWidth="60.0" />
+                                <Label fx:id="lblReferenciaCatastralCasa" layoutX="45.0" layoutY="44.0" text="Referencia catastral" />
+                                <TextField fx:id="txtReferenciaCatastralCasa" layoutX="45.0" layoutY="73.0" prefHeight="25.0" prefWidth="109.0" />
                                 <Pane fx:id="panePropietariosEnCasa" layoutX="45.0" layoutY="158.0" prefHeight="160.0" prefWidth="497.0" style="-fx-border-width: 1; -fx-border-color: #039ed3; -fx-background-color: white;">
                                     <children>
-                                        <Button fx:id="btnSiguientePropietarioEnCasa" layoutX="408.0" layoutY="48.0" mnemonicParsing="false" onAction="#btnSiguientePropietarioEnCasaOnClick" prefHeight="25.0" prefWidth="25.0" text="&gt;" />
-                                        <Button fx:id="btnAnteriorPropietarioEnCasa" layoutX="383.0" layoutY="48.0" mnemonicParsing="false" onAction="#btnAnteriorPropietarioEnCasaOnClick" prefHeight="25.0" prefWidth="25.0" text="&lt;" />
-                                        <Button fx:id="btnEliminarPropietarioEnCasa" layoutX="433.0" layoutY="48.0" mnemonicParsing="false" onAction="#btnEliminarPropietarioEnCasaOnClick" prefHeight="25.0" prefWidth="25.0" text="-" />
-                                        <Button fx:id="btnAsociarPropietarioEnCasa" layoutX="359.0" layoutY="48.0" mnemonicParsing="false" onAction="#btnAsociarPropietarioEnCasaOnClick" text="+" />
-                                        <Label fx:id="lblIdPropietarioEnCasa" layoutX="17.0" layoutY="22.0" text="ID" />
-                                        <TextField fx:id="txtIdPropietarioEnCasa" layoutX="15.0" layoutY="48.0" prefHeight="25.0" prefWidth="28.0" />
-                                        <Label fx:id="lblNombrePropietarioEnCasa" layoutX="74.0" layoutY="22.0" text="Nombre" />
-                                        <TextField fx:id="txtNombrePropietarioEnCasa" layoutX="74.0" layoutY="48.0" prefHeight="25.0" prefWidth="110.0" />
-                                        <Label fx:id="lblApellidosPropietarioEnCasa" layoutX="224.0" layoutY="22.0" text="Apellidos" />
-                                        <TextField fx:id="txtApellidosPropietarioEnCasa" layoutX="224.0" layoutY="48.0" prefHeight="25.0" prefWidth="110.0" />
+                                        <Button fx:id="btnSiguientePropietarioEnCasa" layoutX="233.0" layoutY="102.0" mnemonicParsing="false" onAction="#btnSiguientePropietarioEnCasaOnClick" prefHeight="25.0" prefWidth="25.0" text="&gt;" />
+                                        <Button fx:id="btnAnteriorPropietarioEnCasa" layoutX="208.0" layoutY="102.0" mnemonicParsing="false" onAction="#btnAnteriorPropietarioEnCasaOnClick" prefHeight="25.0" prefWidth="25.0" text="&lt;" />
+                                        <Button fx:id="btnEliminarPropietarioEnCasa" layoutX="258.0" layoutY="102.0" mnemonicParsing="false" onAction="#btnEliminarPropietarioEnCasaOnClick" prefHeight="25.0" prefWidth="25.0" text="-" />
+                                        <Button fx:id="btnAsociarPropietarioEnCasa" layoutX="184.0" layoutY="102.0" mnemonicParsing="false" onAction="#btnAsociarPropietarioEnCasaOnClick" text="+" />
+                                        <Label fx:id="lblDniPropietarioEnCasa" layoutX="17.0" layoutY="22.0" text="DNI" />
+                                        <TextField fx:id="txtDniPropietarioEnCasa" layoutX="15.0" layoutY="48.0" prefHeight="25.0" prefWidth="96.0" />
+                                        <Label fx:id="lblNombrePropietarioEnCasa" layoutX="127.0" layoutY="22.0" text="Nombre" />
+                                        <TextField fx:id="txtNombrePropietarioEnCasa" layoutX="129.0" layoutY="48.0" prefHeight="25.0" prefWidth="110.0" />
+                                        <Label fx:id="lblApellidosPropietarioEnCasa" layoutX="259.0" layoutY="22.0" text="Apellidos" />
+                                        <TextField fx:id="txtApellidosPropietarioEnCasa" layoutX="258.0" layoutY="48.0" prefHeight="25.0" prefWidth="110.0" />
                                         <Button fx:id="btnCancelarPropietarioEnCasa" layoutX="14.0" layoutY="102.0" mnemonicParsing="false" onAction="#btnCancelarPropietarioEnCasaOnClick" text="Cancelar" />
                                         <Button fx:id="btnAceptarPropietarioEnCasa" layoutX="92.0" layoutY="102.0" mnemonicParsing="false" onAction="#btnAceptarPropietarioEnCasaOnClick" text="Aceptar" />
+                                        <Label fx:id="lblTelefonoPropietarioEnCasa" layoutX="385.0" layoutY="22.0" text="Teléfono" />
+                                        <TextField fx:id="txtTelefonoPropietarioEnCasa" layoutX="385.0" layoutY="48.0" prefHeight="25.0" prefWidth="98.0" />
                                     </children>
                                 </Pane>
                                 <Button fx:id="btnModificarCasa" layoutX="45.0" layoutY="113.0" mnemonicParsing="false" onAction="#btnModificarCasaOnClick" text="Modificar" />
+                                <Label fx:id="lblPrecioCasa" layoutX="322.0" layoutY="44.0" text="Precio" />
+                                <TextField fx:id="txtPrecioCasa" layoutX="322.0" layoutY="73.0" prefHeight="25.0" prefWidth="81.0" />
                             </children>
                         </AnchorPane>
                     </content>
