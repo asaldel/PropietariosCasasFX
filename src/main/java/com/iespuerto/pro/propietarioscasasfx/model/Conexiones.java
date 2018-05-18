@@ -27,7 +27,7 @@ public class Conexiones {
     
     static public Connection mysql(String url, String user, String pass) throws SQLException{
         conexion=null;
-        String jdbcUrl = "jdbc:mysql://192.168.1.134/registro_casas";
+        String jdbcUrl = "jdbc:mysql://192.168.1.134/registro_casas?serverTimezone=UTC";
         String usuario = "root";
         String clave = "1q2w3e4r";
         if(url != null && !url.isEmpty())

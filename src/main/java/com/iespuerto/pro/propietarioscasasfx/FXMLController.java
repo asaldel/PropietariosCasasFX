@@ -1,5 +1,10 @@
 package com.iespuerto.pro.propietarioscasasfx;
 
+import com.iespuerto.pro.propietarioscasasfx.model.Almacen;
+import com.iespuerto.pro.propietarioscasasfx.model.Casa;
+import com.iespuerto.pro.propietarioscasasfx.model.Conexiones;
+import com.iespuerto.pro.propietarioscasasfx.model.Propietario;
+import com.iespuerto.pro.propietarioscasasfx.model.Sentencias;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -12,7 +17,10 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 
 public class FXMLController implements Initializable {
-
+    Propietario propietario;
+    Casa casa;
+    Almacen almacen;
+    
     @FXML
     private Button btnAgregarPropietario;
     @FXML
@@ -120,6 +128,12 @@ public class FXMLController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        Conexiones.cargarDriverMysql();
+        
+        propietario = new Propietario();
+        casa = new Casa();
+        almacen = new Almacen();
+        
         txtReferenciaCatastralCasaEnPropietario.setEditable(false);
         txtReferenciaCatastralCasaEnPropietario.getStyleClass().addAll("fondoGris");
         txtMetrosCasaEnPropietario.setEditable(false);
@@ -144,30 +158,47 @@ public class FXMLController implements Initializable {
             alert.setContentText("¡Debe introducir los datos del propietario!".toUpperCase());
             alert.showAndWait();
         } else {
-            txtDniPropietario.setEditable(false);
-            txtDniPropietario.getStyleClass().addAll("fondoGris");
-            txtNombrePropietario.setEditable(false);
-            txtNombrePropietario.getStyleClass().addAll("fondoGris");
-            txtApellidosPropietario.setEditable(false);
-            txtApellidosPropietario.getStyleClass().addAll("fondoGris");
-            txtTelefonoPropietario.setEditable(false);
-            txtTelefonoPropietario.getStyleClass().addAll("fondoGris");
+            propietario.setDni(txtDniPropietario.getText());
+            propietario.setNombre(txtNombrePropietario.getText());
+            propietario.setApellidos(txtApellidosPropietario.getText());
+            propietario.setTelefono(txtTelefonoPropietario.getText());
+            
+            Sentencias.insertPropietario(propietario);
+            
+            txtDniPropietario.clear();
+            txtNombrePropietario.clear();
+            txtApellidosPropietario.clear();
+            txtTelefonoPropietario.clear();
         }
     }
 
     @FXML
     private void btnAnteriorPropietarioOnClick(ActionEvent event) {
-
+        txtDniPropietario.setEditable(false);
+        txtDniPropietario.getStyleClass().addAll("fondoGris");
+        txtNombrePropietario.setEditable(false);
+        txtNombrePropietario.getStyleClass().addAll("fondoGris");
+        txtApellidosPropietario.setEditable(false);
+        txtApellidosPropietario.getStyleClass().addAll("fondoGris");
+        txtTelefonoPropietario.setEditable(false);
+        txtTelefonoPropietario.getStyleClass().addAll("fondoGris");
     }
 
     @FXML
     private void btnSiguientePropietarioOnClick(ActionEvent event) {
-
+        txtDniPropietario.setEditable(false);
+        txtDniPropietario.getStyleClass().addAll("fondoGris");
+        txtNombrePropietario.setEditable(false);
+        txtNombrePropietario.getStyleClass().addAll("fondoGris");
+        txtApellidosPropietario.setEditable(false);
+        txtApellidosPropietario.getStyleClass().addAll("fondoGris");
+        txtTelefonoPropietario.setEditable(false);
+        txtTelefonoPropietario.getStyleClass().addAll("fondoGris");
     }
 
     @FXML
     private void btnEliminarPropietarioOnClick(ActionEvent event) {
-
+        Sentencias.deletePropietario(propietario);
     }
 
     @FXML
@@ -219,28 +250,41 @@ public class FXMLController implements Initializable {
             alert.setContentText("¡Debe introducir los datos de la casa!".toUpperCase());
             alert.showAndWait();
         } else {
-            txtReferenciaCatastralCasa.setEditable(false);
-            txtReferenciaCatastralCasa.getStyleClass().addAll("fondoGris");
-            txtMetrosCasa.setEditable(false);
-            txtMetrosCasa.getStyleClass().addAll("fondoGris");
-            txtPrecioCasa.setEditable(false);
-            txtPrecioCasa.getStyleClass().addAll("fondoGris");
+            casa.setRef_catastral(txtReferenciaCatastralCasa.getText());
+            casa.setMetros(Integer.parseInt(txtMetrosCasa.getText()));
+            casa.setPrecio(Double.parseDouble(txtPrecioCasa.getText()));
+            
+            Sentencias.insertCasa(casa);
+            
+            txtReferenciaCatastralCasa.clear();
+            txtMetrosCasa.clear();
+            txtPrecioCasa.clear();
         }
     }
 
     @FXML
     private void btnAnteriorCasaOnClick(ActionEvent event) {
-
+        txtReferenciaCatastralCasa.setEditable(false);
+        txtReferenciaCatastralCasa.getStyleClass().addAll("fondoGris");
+        txtMetrosCasa.setEditable(false);
+        txtMetrosCasa.getStyleClass().addAll("fondoGris");
+        txtPrecioCasa.setEditable(false);
+        txtPrecioCasa.getStyleClass().addAll("fondoGris");
     }
 
     @FXML
     private void btnSiguienteCasaOnClick(ActionEvent event) {
-
+        txtReferenciaCatastralCasa.setEditable(false);
+        txtReferenciaCatastralCasa.getStyleClass().addAll("fondoGris");
+        txtMetrosCasa.setEditable(false);
+        txtMetrosCasa.getStyleClass().addAll("fondoGris");
+        txtPrecioCasa.setEditable(false);
+        txtPrecioCasa.getStyleClass().addAll("fondoGris");
     }
 
     @FXML
     private void btnEliminarCasaOnClick(ActionEvent event) {
-
+        Sentencias.deleteCasa(casa);
     }
 
     @FXML
