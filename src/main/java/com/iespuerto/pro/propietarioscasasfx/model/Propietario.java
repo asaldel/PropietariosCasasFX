@@ -17,7 +17,7 @@ public class Propietario {
     private String nombre;
     private String apellidos;
     private String telefono;
-    private ArrayList<Casa> casas;
+//    private ArrayList<Casa> casas;
 
     public Propietario() {
     }
@@ -27,7 +27,7 @@ public class Propietario {
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.telefono = telefono;
-        this.casas = new ArrayList();
+//        this.casas = new ArrayList();
     }
 
     public String getDni() {
@@ -46,9 +46,9 @@ public class Propietario {
         return telefono;
     }
 
-    public ArrayList<Casa> getCasas() {
-        return casas;
-    }
+//    public ArrayList<Casa> getCasas() {
+//        return casas;
+//    }
 
     public void setDni(String dni) {
         this.dni = dni;
@@ -66,9 +66,9 @@ public class Propietario {
         this.telefono = telefono;
     }
 
-    public void setCasas(Casa casa) {
-        this.casas.add(casa);
-    }
+//    public void setCasas(Casa casa) {
+//        this.casas.add(casa);
+//    }
 
     @Override
     public String toString() {

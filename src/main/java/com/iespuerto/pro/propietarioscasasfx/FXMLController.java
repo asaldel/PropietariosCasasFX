@@ -153,7 +153,20 @@ public class FXMLController implements Initializable {
 
     @FXML
     private void btnAgregarPropietarioOnClick(ActionEvent event) {
-        if (txtDniPropietario.getText().equals("") || txtNombrePropietario.getText().equals("") || txtApellidosPropietario.getText().equals("") || txtTelefonoPropietario.getText().equals("")) {
+        if( ! txtDniPropietario.isEditable()){
+            txtDniPropietario.clear();
+            txtNombrePropietario.clear();
+            txtApellidosPropietario.clear();
+            txtTelefonoPropietario.clear();
+            txtDniPropietario.setEditable(true);
+            txtDniPropietario.getStyleClass().remove("fondoGris");
+            txtNombrePropietario.setEditable(true);
+            txtNombrePropietario.getStyleClass().remove("fondoGris");
+            txtApellidosPropietario.setEditable(true);
+            txtApellidosPropietario.getStyleClass().remove("fondoGris");
+            txtTelefonoPropietario.setEditable(true);
+            txtTelefonoPropietario.getStyleClass().remove("fondoGris");
+        }else if (txtDniPropietario.getText().equals("") || txtNombrePropietario.getText().equals("") || txtApellidosPropietario.getText().equals("") || txtTelefonoPropietario.getText().equals("")) {
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setContentText("¡Debe introducir los datos del propietario!".toUpperCase());
             alert.showAndWait();
@@ -164,73 +177,153 @@ public class FXMLController implements Initializable {
             propietario.setTelefono(txtTelefonoPropietario.getText());
             
             Sentencias.insertPropietario(propietario);
+            almacen.setPropietarios_mostrados();
             
-            txtDniPropietario.clear();
-            txtNombrePropietario.clear();
-            txtApellidosPropietario.clear();
-            txtTelefonoPropietario.clear();
+            txtDniPropietario.setText(propietario.getDni());
+            txtNombrePropietario.setText(propietario.getNombre());
+            txtApellidosPropietario.setText(propietario.getApellidos());
+            txtTelefonoPropietario.setText(propietario.getTelefono());
+            
+            txtDniPropietario.setEditable(false);
+            txtDniPropietario.getStyleClass().addAll("fondoGris");
+            txtNombrePropietario.setEditable(false);
+            txtNombrePropietario.getStyleClass().addAll("fondoGris");
+            txtApellidosPropietario.setEditable(false);
+            txtApellidosPropietario.getStyleClass().addAll("fondoGris");
+            txtTelefonoPropietario.setEditable(false);
+            txtTelefonoPropietario.getStyleClass().addAll("fondoGris");
         }
     }
 
     @FXML
     private void btnAnteriorPropietarioOnClick(ActionEvent event) {
-        txtDniPropietario.setEditable(false);
-        txtDniPropietario.getStyleClass().addAll("fondoGris");
-        txtNombrePropietario.setEditable(false);
-        txtNombrePropietario.getStyleClass().addAll("fondoGris");
-        txtApellidosPropietario.setEditable(false);
-        txtApellidosPropietario.getStyleClass().addAll("fondoGris");
-        txtTelefonoPropietario.setEditable(false);
-        txtTelefonoPropietario.getStyleClass().addAll("fondoGris");
+//        txtDniPropietario.setEditable(false);
+//        txtDniPropietario.getStyleClass().addAll("fondoGris");
+//        txtNombrePropietario.setEditable(false);
+//        txtNombrePropietario.getStyleClass().addAll("fondoGris");
+//        txtApellidosPropietario.setEditable(false);
+//        txtApellidosPropietario.getStyleClass().addAll("fondoGris");
+//        txtTelefonoPropietario.setEditable(false);
+//        txtTelefonoPropietario.getStyleClass().addAll("fondoGris");
+
+        if( ! txtDniPropietario.isEditable()){
+            propietario = almacen.propietarios_move(0);
+//            almacen.setCasas_propietario(propietario);
+            txtDniPropietario.setText(propietario.getDni());
+            txtNombrePropietario.setText(propietario.getNombre());
+            txtApellidosPropietario.setText(propietario.getApellidos());
+            txtTelefonoPropietario.setText(propietario.getTelefono());
+        }    
     }
 
     @FXML
     private void btnSiguientePropietarioOnClick(ActionEvent event) {
-        txtDniPropietario.setEditable(false);
-        txtDniPropietario.getStyleClass().addAll("fondoGris");
-        txtNombrePropietario.setEditable(false);
-        txtNombrePropietario.getStyleClass().addAll("fondoGris");
-        txtApellidosPropietario.setEditable(false);
-        txtApellidosPropietario.getStyleClass().addAll("fondoGris");
-        txtTelefonoPropietario.setEditable(false);
-        txtTelefonoPropietario.getStyleClass().addAll("fondoGris");
+//        txtDniPropietario.setEditable(false);
+//        txtDniPropietario.getStyleClass().addAll("fondoGris");
+//        txtNombrePropietario.setEditable(false);
+//        txtNombrePropietario.getStyleClass().addAll("fondoGris");
+//        txtApellidosPropietario.setEditable(false);
+//        txtApellidosPropietario.getStyleClass().addAll("fondoGris");
+//        txtTelefonoPropietario.setEditable(false);
+//        txtTelefonoPropietario.getStyleClass().addAll("fondoGris");
+
+        if( ! txtDniPropietario.isEditable()){
+            propietario = almacen.propietarios_move(1);
+            
+            txtDniPropietario.setText(propietario.getDni());
+            txtNombrePropietario.setText(propietario.getNombre());
+            txtApellidosPropietario.setText(propietario.getApellidos());
+            txtTelefonoPropietario.setText(propietario.getTelefono());
+        }
     }
 
     @FXML
     private void btnEliminarPropietarioOnClick(ActionEvent event) {
         Sentencias.deletePropietario(propietario);
+        almacen.setPropietarios_mostrados();
     }
 
     @FXML
     private void btnModificarPropietarioOnClick(ActionEvent event) {
-        txtDniPropietario.setEditable(true);
-        txtDniPropietario.getStyleClass().remove("fondoGris");
-        txtNombrePropietario.setEditable(true);
-        txtNombrePropietario.getStyleClass().remove("fondoGris");
-        txtApellidosPropietario.setEditable(true);
-        txtApellidosPropietario.getStyleClass().remove("fondoGris");
-        txtTelefonoPropietario.setEditable(true);
-        txtTelefonoPropietario.getStyleClass().remove("fondoGris");
+//        txtDniPropietario.setEditable(true);
+//        txtDniPropietario.getStyleClass().remove("fondoGris");
+//        txtNombrePropietario.setEditable(true);
+//        txtNombrePropietario.getStyleClass().remove("fondoGris");
+//        txtApellidosPropietario.setEditable(true);
+//        txtApellidosPropietario.getStyleClass().remove("fondoGris");
+//        txtTelefonoPropietario.setEditable(true);
+//        txtTelefonoPropietario.getStyleClass().remove("fondoGris");
     }
 
     @FXML
     private void btnAsociarCasaEnPropietarioOnClick(ActionEvent event) {
-
+        if( ! txtReferenciaCatastralCasaEnPropietario.isEditable()){
+            txtReferenciaCatastralCasaEnPropietario.clear();
+            txtMetrosCasaEnPropietario.clear();
+            txtPrecioCasaEnPropietario.clear();
+            
+            txtReferenciaCatastralCasaEnPropietario.setEditable(true);
+            txtMetrosCasaEnPropietario.setEditable(true);
+            txtPrecioCasaEnPropietario.setEditable(true);
+            
+            txtReferenciaCatastralCasaEnPropietario.getStyleClass().remove("fondoGris");
+            txtMetrosCasaEnPropietario.getStyleClass().remove("fondoGris");
+            txtPrecioCasaEnPropietario.getStyleClass().remove("fondoGris");
+            
+        }else if (txtReferenciaCatastralCasaEnPropietario.getText().isEmpty() || txtMetrosCasaEnPropietario.getText().isEmpty() || txtPrecioCasaEnPropietario.getText().isEmpty()) {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setContentText("¡Debe introducir los datos de la casa!".toUpperCase());
+            alert.showAndWait();
+        } else {
+            casa.setRef_catastral(txtReferenciaCatastralCasaEnPropietario.getText());
+            casa.setMetros(Integer.parseInt(txtMetrosCasaEnPropietario.getText()));
+            casa.setPrecio(Double.parseDouble(txtPrecioCasaEnPropietario.getText()));
+            
+            Sentencias.insertCasa(casa);
+            Sentencias.insertRelacion(propietario, casa);
+            
+            almacen.setCasas_propietario(propietario);
+            
+            txtReferenciaCatastralCasaEnPropietario.setText(casa.getRef_catastral());
+            txtMetrosCasaEnPropietario.setText(""+casa.getMetros());
+            txtPrecioCasaEnPropietario.setText(""+casa.getPrecio());
+            
+            txtReferenciaCatastralCasaEnPropietario.setEditable(false);
+            txtMetrosCasaEnPropietario.setEditable(false);
+            txtPrecioCasaEnPropietario.setEditable(false);
+            
+            txtReferenciaCatastralCasaEnPropietario.getStyleClass().addAll("fondoGris");
+            txtMetrosCasaEnPropietario.getStyleClass().addAll("fondoGris");
+            txtPrecioCasaEnPropietario.getStyleClass().addAll("fondoGris");
+        }
     }
 
     @FXML
     private void btnAnteriorCasaEnPropietarioOnClick(ActionEvent event) {
-
+        if( ! txtReferenciaCatastralCasaEnPropietario.isEditable()){
+            almacen.setCasas_propietario(propietario);
+            casa = almacen.casasDePropietario_move(0);
+            txtReferenciaCatastralCasaEnPropietario.setText(casa.getRef_catastral());
+            txtMetrosCasaEnPropietario.setText(""+casa.getMetros());
+            txtPrecioCasaEnPropietario.setText(""+casa.getPrecio());
+        }
     }
 
     @FXML
     private void btnSiguienteCasaEnPropietarioOnClick(ActionEvent event) {
-
+        if( ! txtReferenciaCatastralCasaEnPropietario.isEditable()){
+            almacen.setCasas_propietario(propietario);
+            casa = almacen.casasDePropietario_move(1);
+            txtReferenciaCatastralCasaEnPropietario.setText(casa.getRef_catastral());
+            txtMetrosCasaEnPropietario.setText(""+casa.getMetros());
+            txtPrecioCasaEnPropietario.setText(""+casa.getPrecio());
+        }
     }
 
     @FXML
     private void btnEliminarCasaEnPropietarioOnClick(ActionEvent event) {
-
+        Sentencias.deleteCasa(casa);
+        almacen.setCasas_propietario(propietario);
     }
 
     @FXML
@@ -245,7 +338,20 @@ public class FXMLController implements Initializable {
 
     @FXML
     private void btnAgregarCasaOnClick(ActionEvent event) {
-        if (txtReferenciaCatastralCasa.getText().equals("") || txtMetrosCasa.getText().equals("") || txtPrecioCasa.getText().equals("")) {
+        if( ! txtReferenciaCatastralCasa.isEditable()){
+            
+            txtReferenciaCatastralCasa.clear();
+            txtMetrosCasa.clear();
+            txtPrecioCasa.clear();
+            
+            txtReferenciaCatastralCasa.setEditable(true);
+            txtReferenciaCatastralCasa.getStyleClass().addAll("fondoGris");
+            txtMetrosCasa.setEditable(false);
+            txtMetrosCasa.getStyleClass().addAll("fondoGris");
+            txtPrecioCasa.setEditable(false);
+            txtPrecioCasa.getStyleClass().addAll("fondoGris");
+            
+        }else if( txtReferenciaCatastralCasa.getText().isEmpty() || txtMetrosCasa.getText().isEmpty() || txtPrecioCasa.getText().isEmpty() ){
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setContentText("¡Debe introducir los datos de la casa!".toUpperCase());
             alert.showAndWait();
@@ -255,66 +361,148 @@ public class FXMLController implements Initializable {
             casa.setPrecio(Double.parseDouble(txtPrecioCasa.getText()));
             
             Sentencias.insertCasa(casa);
+            almacen.setCasas_mostradas();
             
-            txtReferenciaCatastralCasa.clear();
-            txtMetrosCasa.clear();
-            txtPrecioCasa.clear();
+            txtReferenciaCatastralCasa.setText(casa.getRef_catastral());
+            txtMetrosCasa.setText(""+casa.getMetros());
+            txtPrecioCasa.setText(""+casa.getPrecio());
+            
+            txtReferenciaCatastralCasa.setEditable(false);
+            txtReferenciaCatastralCasa.getStyleClass().addAll("fondoGris");
+            txtMetrosCasa.setEditable(false);
+            txtMetrosCasa.getStyleClass().addAll("fondoGris");
+            txtPrecioCasa.setEditable(false);
+            txtPrecioCasa.getStyleClass().addAll("fondoGris");
         }
     }
 
     @FXML
     private void btnAnteriorCasaOnClick(ActionEvent event) {
-        txtReferenciaCatastralCasa.setEditable(false);
-        txtReferenciaCatastralCasa.getStyleClass().addAll("fondoGris");
-        txtMetrosCasa.setEditable(false);
-        txtMetrosCasa.getStyleClass().addAll("fondoGris");
-        txtPrecioCasa.setEditable(false);
-        txtPrecioCasa.getStyleClass().addAll("fondoGris");
+//        txtReferenciaCatastralCasa.setEditable(false);
+//        txtReferenciaCatastralCasa.getStyleClass().addAll("fondoGris");
+//        txtMetrosCasa.setEditable(false);
+//        txtMetrosCasa.getStyleClass().addAll("fondoGris");
+//        txtPrecioCasa.setEditable(false);
+//        txtPrecioCasa.getStyleClass().addAll("fondoGris");
+
+        if( ! txtReferenciaCatastralCasa.isEditable()){
+            almacen.setCasas_mostradas();
+            casa = almacen.casas_move(0);
+            txtReferenciaCatastralCasa.setText(casa.getRef_catastral());
+            txtMetrosCasa.setText(""+casa.getMetros());
+            txtPrecioCasa.setText(""+casa.getPrecio());
+        }
     }
 
     @FXML
     private void btnSiguienteCasaOnClick(ActionEvent event) {
-        txtReferenciaCatastralCasa.setEditable(false);
-        txtReferenciaCatastralCasa.getStyleClass().addAll("fondoGris");
-        txtMetrosCasa.setEditable(false);
-        txtMetrosCasa.getStyleClass().addAll("fondoGris");
-        txtPrecioCasa.setEditable(false);
-        txtPrecioCasa.getStyleClass().addAll("fondoGris");
+//        txtReferenciaCatastralCasa.setEditable(false);
+//        txtReferenciaCatastralCasa.getStyleClass().addAll("fondoGris");
+//        txtMetrosCasa.setEditable(false);
+//        txtMetrosCasa.getStyleClass().addAll("fondoGris");
+//        txtPrecioCasa.setEditable(false);
+//        txtPrecioCasa.getStyleClass().addAll("fondoGris");
+
+        if( ! txtReferenciaCatastralCasa.isEditable()){
+            almacen.setCasas_mostradas();
+            casa = almacen.casas_move(1);
+            txtReferenciaCatastralCasa.setText(casa.getRef_catastral());
+            txtMetrosCasa.setText(""+casa.getMetros());
+            txtPrecioCasa.setText(""+casa.getPrecio());
+        }
     }
 
     @FXML
     private void btnEliminarCasaOnClick(ActionEvent event) {
         Sentencias.deleteCasa(casa);
+        almacen.setCasas_mostradas();
     }
 
     @FXML
     private void btnModificarCasaOnClick(ActionEvent event) {
-        txtReferenciaCatastralCasa.setEditable(true);
-        txtReferenciaCatastralCasa.getStyleClass().remove("fondoGris");
-        txtMetrosCasa.setEditable(true);
-        txtMetrosCasa.getStyleClass().remove("fondoGris");
-        txtPrecioCasa.setEditable(true);
-        txtPrecioCasa.getStyleClass().remove("fondoGris");
+//        txtReferenciaCatastralCasa.setEditable(true);
+//        txtReferenciaCatastralCasa.getStyleClass().remove("fondoGris");
+//        txtMetrosCasa.setEditable(true);
+//        txtMetrosCasa.getStyleClass().remove("fondoGris");
+//        txtPrecioCasa.setEditable(true);
+//        txtPrecioCasa.getStyleClass().remove("fondoGris");
     }
 
     @FXML
     private void btnAsociarPropietarioEnCasaOnClick(ActionEvent event) {
-
+        if( ! txtDniPropietarioEnCasa.isEditable()){
+            txtDniPropietarioEnCasa.clear();
+            txtNombrePropietarioEnCasa.clear();
+            txtApellidosPropietarioEnCasa.clear();
+            txtTelefonoPropietarioEnCasa.clear();
+            txtDniPropietarioEnCasa.setEditable(true);
+            txtDniPropietarioEnCasa.getStyleClass().remove("fondoGris");
+            txtNombrePropietarioEnCasa.setEditable(true);
+            txtNombrePropietarioEnCasa.getStyleClass().remove("fondoGris");
+            txtApellidosPropietarioEnCasa.setEditable(true);
+            txtApellidosPropietarioEnCasa.getStyleClass().remove("fondoGris");
+            txtTelefonoPropietarioEnCasa.setEditable(true);
+            txtTelefonoPropietarioEnCasa.getStyleClass().remove("fondoGris");
+        }else if (txtDniPropietarioEnCasa.getText().equals("") || txtNombrePropietarioEnCasa.getText().equals("") || txtApellidosPropietarioEnCasa.getText().equals("") || txtTelefonoPropietarioEnCasa.getText().equals("")) {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setContentText("¡Debe introducir los datos del propietario!".toUpperCase());
+            alert.showAndWait();
+        } else {
+            propietario.setDni(txtDniPropietarioEnCasa.getText());
+            propietario.setNombre(txtNombrePropietarioEnCasa.getText());
+            propietario.setApellidos(txtApellidosPropietarioEnCasa.getText());
+            propietario.setTelefono(txtTelefonoPropietarioEnCasa.getText());
+            
+            Sentencias.insertPropietario(propietario);
+            Sentencias.insertRelacion(propietario, casa);
+            almacen.setPropietarios_casas_mostrados(casa);
+            
+            txtDniPropietarioEnCasa.setText(propietario.getDni());
+            txtNombrePropietarioEnCasa.setText(propietario.getNombre());
+            txtApellidosPropietarioEnCasa.setText(propietario.getApellidos());
+            txtTelefonoPropietarioEnCasa.setText(propietario.getTelefono());
+            
+            txtDniPropietarioEnCasa.setEditable(false);
+            txtDniPropietarioEnCasa.getStyleClass().addAll("fondoGris");
+            txtNombrePropietarioEnCasa.setEditable(false);
+            txtNombrePropietarioEnCasa.getStyleClass().addAll("fondoGris");
+            txtApellidosPropietarioEnCasa.setEditable(false);
+            txtApellidosPropietarioEnCasa.getStyleClass().addAll("fondoGris");
+            txtTelefonoPropietarioEnCasa.setEditable(false);
+            txtTelefonoPropietarioEnCasa.getStyleClass().addAll("fondoGris");
+        }
+        
     }
 
     @FXML
     private void btnAnteriorPropietarioEnCasaOnClick(ActionEvent event) {
+        if( ! txtDniPropietarioEnCasa.isEditable()){
+            almacen.setPropietarios_casas_mostrados(casa);
+            propietario = almacen.propietarios_casas_mostrados_move(0);  
+            txtDniPropietarioEnCasa.setText(propietario.getDni());
+            txtNombrePropietarioEnCasa.setText(propietario.getNombre());
+            txtApellidosPropietarioEnCasa.setText(propietario.getApellidos());
+            txtTelefonoPropietarioEnCasa.setText(propietario.getTelefono());
+        }
 
     }
 
     @FXML
     private void btnSiguientePropietarioEnCasaOnClick(ActionEvent event) {
-
+        if( ! txtDniPropietarioEnCasa.isEditable()){
+            almacen.setPropietarios_casas_mostrados(casa);
+            propietario = almacen.propietarios_casas_mostrados_move(1);
+            txtDniPropietarioEnCasa.setText(propietario.getDni());
+            txtNombrePropietarioEnCasa.setText(propietario.getNombre());
+            txtApellidosPropietarioEnCasa.setText(propietario.getApellidos());
+            txtTelefonoPropietarioEnCasa.setText(propietario.getTelefono());
+        }
     }
 
     @FXML
     private void btnEliminarPropietarioEnCasaOnClick(ActionEvent event) {
-
+        Sentencias.deletePropietario(propietario);
+        almacen.setPropietarios_casas_mostrados(casa);
     }
 
     @FXML

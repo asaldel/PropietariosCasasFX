@@ -16,7 +16,7 @@ public class Casa {
     private String ref_catastral;  
     private int metros;
     private double precio;
-    private ArrayList<Propietario> propietarios;
+//    private ArrayList<Propietario> propietarios;
     
     //Direccion
     private String calle;
@@ -32,7 +32,7 @@ public class Casa {
         this.ref_catastral = ref_catastral;
         this.metros = metros;
         this.precio = precio;
-        this.propietarios = new ArrayList();
+//        this.propietarios = new ArrayList();
     }
     
     public Casa(String ref_catastral, String calle, int numero, String municipio, String provincia, int metros, double precio) {
@@ -77,9 +77,9 @@ public class Casa {
         return precio;
     }
 
-    public ArrayList<Propietario> getPropietarios() {
-        return propietarios;
-    }
+//    public ArrayList<Propietario> getPropietarios() {
+//        return propietarios;
+//    }
 
     public void setRef_catastral(String ref_catastral) {
         this.ref_catastral = ref_catastral;
@@ -113,9 +113,9 @@ public class Casa {
         this.precio = precio;
     }
 
-    public void setPropietarios(Propietario propietario) {
-        this.propietarios.add(propietario);
-    }
+//    public void setPropietarios(Propietario propietario) {
+//        this.propietarios.add(propietario);
+//    }
     
     
     @Override

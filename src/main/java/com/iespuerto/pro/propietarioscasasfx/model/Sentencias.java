@@ -73,7 +73,8 @@ public class Sentencias {
         }
     }
     
-    public static void queryCasas(Propietario p){  
+    public static ArrayList queryCasas(Propietario p){ 
+        ArrayList<Casa> casas = new ArrayList();
         try (Connection con = Conexiones.mysql(null, null, null)) {
                 Statement st = con.createStatement();
                 ResultSet res = st.executeQuery("SELECT DISTINCT casa.ref_catastral, casa.metros, casa.precio"
@@ -87,16 +88,18 @@ public class Sentencias {
                     Double precio = res.getDouble("precio");
                     
                     Casa c1 = new Casa(ref_catastral, metros, precio);
-                    p.setCasas(c1);
+                    casas.add(c1);
                 }
 
                 st.close();
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
+        return casas;
     }
     
-    public static void queryPropietarios(Casa c){ 
+    public static ArrayList queryPropietarios(Casa c){
+        ArrayList<Propietario> propietarios = new ArrayList();
         try (Connection con = Conexiones.mysql(null, null, null)) {
                 Statement st = con.createStatement();
                 ResultSet res = st.executeQuery("SELECT DISTINCT propietario.dni, propietario.nombre, propietario.apellidos, propietario.telefono"
@@ -111,13 +114,14 @@ public class Sentencias {
                     String telefono = res.getString("telefono");
                     
                     Propietario p1 = new Propietario(dni, nombre, apellidos, telefono);
-                    c.setPropietarios(p1);
+                    propietarios.add(p1);
                 }
 
                 st.close();
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
+        return propietarios;
     }
     
     public static ArrayList queryAllPropietarios(){ 
